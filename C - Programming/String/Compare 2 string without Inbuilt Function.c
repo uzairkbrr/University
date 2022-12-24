@@ -17,6 +17,8 @@ int main() {
     {
         if(a[i]!=b[i])
             check = false ;
+        
+        i++;
     }
     
     if(check)
