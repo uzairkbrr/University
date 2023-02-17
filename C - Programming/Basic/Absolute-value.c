@@ -1,3 +1,4 @@
+// Author = Uzair Ahmad ;
 #include<stdio.h>
 #include<stdlib.h>
 
