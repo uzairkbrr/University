@@ -4,24 +4,26 @@
 
 int main() {
 
-	int num ,sum1=0, sum=1;
+	int num , sum=0, factorial=1;
 	
 	printf("Enter Number : ");
 	scanf("%d",&num);
 	
 	for(int i=1;i<=num;i++)
 	{
-		sum = 1 ; // Initialize sum to 1 for each iteration
+		factorial = 1 ; // Initialize sum to 1 for each iteration
 	    
 		for(int j=1;j<=i;j++)
 		{
-	    	sum = sum * j ; // Calculate factorial of i
+	    	factorial = factorial * j ; // Calculate factorial of i
 		}
 	
-	sum1 = sum1 + sum ; // Add factorial of i to the sum
+	printf("Factorial of %d = %d\n",i+1,factorial);
+	sum = sum + factorial ; // Add factorial of i to the sum
 	}
 	  
-	printf("Sum : %d",sum1); // Print the final sum
+	printf("Sum of all the factorial from %d to %d is %d",1 , num, sum); // Print the final sum
+	
 	  
 	return 0;
 }
