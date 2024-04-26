@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "nwaEMqQfo/wvHlQxg+wnC124XYK7p0ZElMvCZReXua3KNN/Mhp743ubw1fJj01uoiT8gPK/fvnvzFtrxtYDYaA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Uzair\\University\\DataBase\\Calculator Assignment\\calculator.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Uzair\\.nuget\\packages\\system.configuration.configurationmanager\\8.0.0\\system.configuration.configurationmanager.8.0.0.nupkg.sha512",
+    "C:\\Users\\Uzair\\.nuget\\packages\\system.data.oledb\\8.0.0\\system.data.oledb.8.0.0.nupkg.sha512",
+    "C:\\Users\\Uzair\\.nuget\\packages\\system.diagnostics.eventlog\\8.0.0\\system.diagnostics.eventlog.8.0.0.nupkg.sha512",
+    "C:\\Users\\Uzair\\.nuget\\packages\\system.diagnostics.performancecounter\\8.0.0\\system.diagnostics.performancecounter.8.0.0.nupkg.sha512",
+    "C:\\Users\\Uzair\\.nuget\\packages\\system.security.cryptography.protecteddata\\8.0.0\\system.security.cryptography.protecteddata.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
