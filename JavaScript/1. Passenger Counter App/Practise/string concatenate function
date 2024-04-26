@@ -1,0 +1,8 @@
+let name = "Uzair";
+let greeting = "Hi there";
+
+function greetUzair() {
+    console.log(greeting + ", " + name + " !");
+}
+
+greetUzair();
