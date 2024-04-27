@@ -1,16 +1,19 @@
 let firstCard = 10;
 let secondCard = 4;
-let sum = firstCard + secondCard;
+let cards = [firstCard, secondCard];
+let sum = cards[0] + cards[1];
 let hasBlackJack = false;
 let isAlive = true;
 let message = "";
-let cards = "";
 
 let messageEl = document.getElementById('message-el');
 let sumEl = document.getElementById('sum');
 let cardsEl = document.getElementById('cards-el');
 
-// 3. Render the cars on the page using this format -> "Cards: 10 4"
+function startGame() {
+    renderGame();
+}
+
 
 function renderGame() {
     if (sum <= 20) {
@@ -24,10 +27,10 @@ function renderGame() {
     }
     
     
-    cards = "Cards: " + firstCard + " " + secondCard
+    
     messageEl.textContent = message;
-    sumEl.textContent += " " + sum;
-    cardsEl.textContent = cards;
+    sumEl.textContent = "Sum: " + sum;
+    cardsEl.textContent = "Cards: " + cards[0] + " " + cards[1];
 }
 
 
