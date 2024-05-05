@@ -1,0 +1,18 @@
+body {
+    text-align: center;
+}
+
+#container {
+    margin: 30px auto;
+}
+
+#container button {
+    background: lightcoral;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
