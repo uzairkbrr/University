@@ -23,5 +23,8 @@ let message2 = (login == "Employee") ? "Hello" :
               (login == "") ? "No Login" : "" 
 
 
+console.log(message)
+console.log(message2)
+
 
 
