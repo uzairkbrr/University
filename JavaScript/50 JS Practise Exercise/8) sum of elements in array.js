@@ -6,5 +6,4 @@ for (let i = 0; i < arrayOfNumbers.length; i++) {
     sum += arrayOfNumbers[i];
 }
 
-
 console.log("Sum: ",sum);
