@@ -9,6 +9,7 @@ This repository contains all my university coursework files, including:
   <li><a href="https://github.com/uzairkbrr/University/tree/main/Data%20Structure">Data Structure</a></li>
   <li><a href="https://github.com/uzairkbrr/University/tree/main/DataBase">Database</a></li>
   <li><a href="https://github.com/uzairkbrr/University/tree/main/JavaScript">Javascript</a></li>
+  <li><a href="https://github.com/uzairkbrr/University/tree/main/Python">Python</a></li>
 </ul>
 
 It serves as a central place to organize and manage my academic work and code for various subjects.
