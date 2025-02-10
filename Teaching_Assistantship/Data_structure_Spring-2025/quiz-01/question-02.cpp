@@ -31,9 +31,9 @@ int main() {
     for (int num : numbers) {
       cout << num << " ";
     }
-    cout << endl;
+
   } else {
-    cout << endl << "Number list is empty, Nothing to print!" << endl;
+    cout << endl << "Number list is empty, Nothing to print!";
   }
   return 0;
 }
