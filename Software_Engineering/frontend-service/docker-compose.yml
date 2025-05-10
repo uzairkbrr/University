@@ -1,0 +1,93 @@
+services:
+  frontend-user-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - REACT_APP_AUTH_SERVICE_URL=http://auth-service:3001
+      - REACT_APP_PRODUCT_SERVICE_URL=http://product-service:3002
+      - REACT_APP_ORDER_SERVICE_URL=http://order-service:3003
+      - REACT_APP_PAYMENT_SERVICE_URL=http://payment-service:3004
+      - REACT_APP_SHIPPING_SERVICE_URL=http://shipping-service:3005
+      - REACT_APP_NOTIFICATION_SERVICE_URL=http://notification-service:3006
+    networks:
+      - ecommerce-network
+    depends_on:
+      - auth-service
+      - product-service
+      - order-service
+      - payment-service
+      - shipping-service
+      - notification-service
+
+  auth-service:
+    image: node:18-alpine
+    command: json-server --watch /app/auth.json --port 3001 --routes /app/routes.json
+    volumes:
+      - ./mock/auth.json:/app/auth.json
+      - ./mock/routes.json:/app/routes.json
+    ports:
+      - "3001:3001"
+    networks:
+      - ecommerce-network
+
+  product-service:
+    image: node:18-alpine
+    command: json-server --watch /app/products.json --port 3002 --routes /app/routes.json
+    volumes:
+      - ./mock/products.json:/app/products.json
+      - ./mock/routes.json:/app/routes.json
+    ports:
+      - "3002:3002"
+    networks:
+      - ecommerce-network
+
+  order-service:
+    image: node:18-alpine
+    command: json-server --watch /app/order.json --port 3003 --routes /app/routes.json
+    volumes:
+      - ./mock/order.json:/app/order.json
+      - ./mock/routes.json:/app/routes.json
+    ports:
+      - "3003:3003"
+    networks:
+      - ecommerce-network
+
+  payment-service:
+    image: node:18-alpine
+    command: json-server --watch /app/payment.json --port 3004 --routes /app/routes.json
+    volumes:
+      - ./mock/payment.json:/app/payment.json
+      - ./mock/routes.json:/app/routes.json
+    ports:
+      - "3004:3004"
+    networks:
+      - ecommerce-network
+
+  shipping-service:
+    image: node:18-alpine
+    command: json-server --watch /app/shipping.json --port 3005 --routes /app/routes.json
+    volumes:
+      - ./mock/shipping.json:/app/shipping.json
+      - ./mock/routes.json:/app/routes.json
+    ports:
+      - "3005:3005"
+    networks:
+      - ecommerce-network
+
+  notification-service:
+    image: node:18-alpine
+    command: json-server --watch /app/notifications.json --port 3006 --routes /app/routes.json
+    volumes:
+      - ./mock/notifications.json:/app/notifications.json
+      - ./mock/routes.json:/app/routes.json
+    ports:
+      - "3006:3006"
+    networks:
+      - ecommerce-network
+
+networks:
+  ecommerce-network:
+    driver: bridge

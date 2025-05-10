@@ -1,0 +1,16 @@
+{
+  "notification": [
+    {
+      "id": 1,
+      "message": "Your order #123 has been shipped!",
+      "type": "shipping",
+      "createdAt": "2025-05-11T10:00:00Z"
+    },
+    {
+      "id": 2,
+      "message": "Order #124 confirmed.",
+      "type": "order",
+      "createdAt": "2025-05-11T09:00:00Z"
+    }
+  ]
+}

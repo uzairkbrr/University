@@ -1,0 +1,62 @@
+services:
+  notification-service:
+    build:
+      context: ./notification-service
+      dockerfile: Dockerfile
+    container_name: notification-service
+    ports:
+      - "3005:3005"
+    environment:
+      - PORT=3005
+      - MONGO_URI=mongodb://mongo:27017/notification
+    depends_on:
+      - mongo
+    networks:
+      - ecommerce-network
+
+  shipping-service:
+    build:
+      context: ./shipping-service
+      dockerfile: Dockerfile
+    container_name: shipping-service
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongo
+    environment:
+      - PORT=3000
+      - MONGO_URI=mongodb://mongo:27017/shipping
+      - NOTIFICATION_SERVICE_URL=http://notification-service:3005
+      - SHIPPING_SERVICE_URL=http://shipping-service:3000
+    networks:
+      - ecommerce-network
+
+  order-service:
+    build:
+      context: ./order-service
+    ports:
+      - "8000:8000"
+    environment:
+      # - PRODUCT_SERVICE_URL=http://product-service:8001  # Adjust to actual URL if external
+      # - PAYMENT_SERVICE_URL=http://payment-service:8080  # Adjust to actual URL if external
+      - SHIPPING_SERVICE_URL=http://shipping-service:3000
+      - NOTIFICATION_SERVICE_URL=http://notification-service:3005  # Optional
+      - MONGO_URL=mongodb://mongo:27017
+    depends_on:
+      - mongo  # Fixed from mongodb
+      # - product-service  # Comment out if not available locally
+      # - payment-service  # Comment out if not available locally
+    networks:
+      - ecommerce-network
+
+  mongo:
+    image: mongo
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    networks:
+      - ecommerce-network
+
+networks:
+  ecommerce-network:
+    driver: bridge

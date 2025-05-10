@@ -1,0 +1,24 @@
+services:
+  notification-service:
+    build: .
+    ports:
+      - "3005:3005"
+    environment:
+      - PORT=3005
+    volumes:
+      - .:/app
+    restart: unless-stopped
+    depends_on:
+      - mongodb
+
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    environment:
+      - MONGO_INITDB_DATABASE=notification_db
+
+volumes:
+  mongodb_data:

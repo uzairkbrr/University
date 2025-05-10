@@ -1,0 +1,14 @@
+{
+  "create": {
+    "success": true
+  },
+  "status": {
+    "123": {
+      "status": "Shipped",
+      "address": "123 Main St",
+      "city": "City",
+      "postalCode": "12345",
+      "country": "Country"
+    }
+  }
+}

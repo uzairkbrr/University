@@ -1,0 +1,18 @@
+{
+  "product": [
+    {
+      "id": 1,
+      "name": "Sample Product",
+      "price": 29.99,
+      "description": "A great product",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 2,
+      "name": "Another Product",
+      "price": 49.99,
+      "description": "An even better product",
+      "image": "https://via.placeholder.com/150"
+    }
+  ]
+}

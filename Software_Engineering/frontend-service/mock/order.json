@@ -1,0 +1,19 @@
+{
+  "cart": {
+    "items": [
+      { "id": 1, "name": "Sample Product", "price": 29.99, "quantity": 2 }
+    ]
+  },
+  "order": {
+    "123": {
+      "items": [
+        { "id": 1, "name": "Sample Product", "price": 29.99, "quantity": 2 }
+      ],
+      "total": 59.98,
+      "paymentStatus": "Completed"
+    }
+  },
+  "create": {
+    "orderId": "123"
+  }
+}

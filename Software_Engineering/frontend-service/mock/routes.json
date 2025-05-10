@@ -1,0 +1,13 @@
+{
+  "/api/auth/login": "/login",
+  "/api/auth/register": "/register",
+  "/api/product": "/product",
+  "/api/order/cart": "/cart",
+  "/api/order/cart/:id": "/cart/items/:id",
+  "/api/order/create": "/create",
+  "/api/order/:id": "/order/:id",
+  "/api/payment/process": "/process",
+  "/api/shipping/create": "/create",
+  "/api/shipping/status/:id": "/status/:id",
+  "/api/notification": "/notification"
+}
