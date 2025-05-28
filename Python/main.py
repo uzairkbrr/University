@@ -69,11 +69,13 @@ Default values:
 # print(name[0:5:1])
 # print(name[-5::])
 
+# Formatted String lets you insert variables or expressions inside curly braces {} using the f prefix.
+# Raw string ignores special characters like \n or \t, and treats backslashes as normal characters. Use the r prefix.
 
 # Type convertion
-a = "10"
-a = int(a)
-print(type(a))
+# a = "10"
+# a = int(a)
+# print(type(a))
 
 # We can't convert character into int. i.e: abc can't be converted to int. only numbers can be converted to int
 """
@@ -81,5 +83,23 @@ Types: int(), float(), string(), bool()
 
 """
 
+
+# Input & Output
+"""
+  Input => input()
+  Ouptut => print()
+"""
+
+# name = input("Enter your name: ")
+# print(name)
+
+# name = input("What is your name: ")
+# Default data type of input is string
+
+# Questions: 
+# number = int(input("Enter a number: "))
+# age  = int(input("Enter your age: "))
+# print(f"Number: {number}")
+# print(f"Age: {age}")
 
 
